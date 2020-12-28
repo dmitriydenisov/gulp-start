@@ -1,0 +1,19 @@
+body {
+    background:url('../img/6.jpg');
+}
+div {
+    display: flex;
+    @media (min-width: 720px) {
+        display: flex;
+    }
+}
+h1{
+    color: red;
+    @media (min-width: 720px) {
+        font-size: 120px;
+    }
+}
+p{
+    font-size: 200px;
+}
+
