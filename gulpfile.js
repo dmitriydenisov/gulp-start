@@ -13,7 +13,7 @@ let path= {
   },
   //объект путей исходных файлов
   src: {
-    html: [source_folder + '/*.html', '!'+source_folder + '/_*.html'],
+    html: source_folder + '/pug/index.pug',
     css: source_folder + '/scss/main.scss',
     js: source_folder + '/js/*.js',
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico.webp}',
@@ -22,7 +22,7 @@ let path= {
   },
   // объект постянный слушатель файлов
   watch: {
-    html: source_folder + '/**/*.html',
+    html: source_folder + '/**/*.pug',
     css: source_folder + '/scss/**/*.scss',
     js: source_folder + '/js/**/*.js',
     img: source_folder + '/img/**/*.{jpg,png,svg,gif,ico.webp}',
@@ -35,7 +35,7 @@ let path= {
 let {src, dest} = require('gulp'),
     gulp = require('gulp'),
     browsersync = require('browser-sync').create(),
-    fileInclude = require('gulp-file-include'), //вместо PUG(на время)
+    pug = require('gulp-pug'), //PUG
     del = require('del'),
     scss = require('gulp-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -62,7 +62,7 @@ function browserSync() {
 
 function html() {
   return src(path.src.html)
-    .pipe(fileInclude())
+    .pipe(pug())
     .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
@@ -98,7 +98,6 @@ function css() {
 
 function js() {
   return src(path.src.js)
-    //.pipe(fileInclude())
     .pipe(dest(path.build.js))
     .pipe(
       uglify()

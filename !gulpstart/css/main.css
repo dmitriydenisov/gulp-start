@@ -1,0 +1,31 @@
+body {
+  background: url("../img/6.jpg");
+}
+
+div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+h1 {
+  color: red;
+}
+
+p {
+  font-size: 200px;
+}
+
+@media (min-width: 720px) {
+  div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 120px;
+  }
+}
+
+.webp body { background: url(../img/6.webp); }

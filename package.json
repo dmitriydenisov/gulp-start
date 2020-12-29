@@ -1,6 +1,6 @@
 {
   "name": "gulp-start",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "сборка gulp v4",
   "main": "index.html",
   "scripts": {
@@ -17,17 +17,18 @@
     "gulp-file-include": "^2.3.0",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-imagemin": "^7.1.0",
+    "gulp-pug": "^4.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^2.0.0",
     "gulp-webp": "^4.0.1",
     "gulp-webp-html": "^1.0.2",
-    "gulp-webpcss": "^1.1.1",
-    "webp-converter": "^2.2.3"
+    "gulp-webpcss": "^1.1.1"
   },
   "dependencies": {
     "browser-sync": "^2.26.13",
     "cwebp": "^2.0.5",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "webp-converter": "^2.2.3"
   }
 }
